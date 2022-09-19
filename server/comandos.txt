@@ -1,0 +1,36 @@
+- Cria o pakage.json
+    npm init -y
+
+- Instalação express
+    npm install express
+    - Express não tem type nativo deve ser instalado
+      npm install @types/express -D
+
+-  Instalação ts node para quando houver mudanças ele atualizar sozinho 
+    npm i ts-node-dev -D
+      Add a linha em pakage.json
+        "dev": " tsnd  src/server.ts"
+          Para rodar com 
+             npm run dev
+
+- Tipagem 
+    npm i typescript -D
+
+
+- Mudar em tsconfig.json para
+    "rootDir": "./src",
+    "outDir": "./build", 
+    "moduleResolution": "node", 
+
+- Prisma
+    npm i prisma -D
+    npx prisma init --datasource-provider SQLite
+    - Quando alterar tabelas ou criar usar 
+        npx prisma migrate dev
+    - Ver banco de dados 
+        npx prisma studio
+    - Acessar banco de dados
+        npm i @prisma/client
+
+    npm i cors
+    npm i @types/cors -D
